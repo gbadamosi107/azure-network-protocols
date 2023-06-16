@@ -25,7 +25,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- Step 1: Create Resources in Azure and Analyze ICMP Traffic between Windows 10 VM and Linux (Ubuntu) VM
+- Step 1: Create VMs in Azure and Analyze ICMP Traffic between Windows 10 and Linux (Ubuntu)
 - Step 2: Create a Network Security group on Linux to block ICMPs from Windows VM 
 - Step 3: Analyze SSH Traffic
 - Step 4: Analyze DHCP Traffic
