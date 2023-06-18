@@ -101,7 +101,7 @@ In Windows VM1, we will use Wireshark to filter for the Dynamic Host Configurati
 <img src="https://i.imgur.com/GpMKstc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-We will analyze Domain Name Server (DNS) traffic by filtering it on Wireshark. We will then initiate DNS traffic for Google by typing the command, "nslookup www.google.com." DNS uses nslookup to provide the IP address for a host when the human-readable web name is provided. DNS uses both UDP and TCP port 53.
+We will analyze Domain Name Server (DNS) traffic by filtering it on Wireshark. We will then initiate DNS traffic for Google by typing the command, "nslookup www.google.com." DNS uses nslookup to provide the IP address for a host when the human-readable domain name is entered. DNS uses both UDP and TCP port 53.
 </p>
 <br />
 
@@ -110,6 +110,6 @@ We will analyze Domain Name Server (DNS) traffic by filtering it on Wireshark. W
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+We will filter for Remote Desktop Protocol (RDP) traffic, which operates on TCP port 3389. RDP is used to remotely connect from one computer to another to gain remote desktop graphic user interface (GUI).
 </p>
 <br />
