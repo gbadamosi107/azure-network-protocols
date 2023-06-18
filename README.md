@@ -58,7 +58,7 @@ In Azure, create two VMs, one will be Linux (Ubuntu) machine and the other will 
 </p><br>
 <p>  
   
-Use Remote Desktop to connect to Windows 10 VM1. In Windows 10 VM1, install and open Wireshark, which is a protocol analyzer that allows you to view all packets coming through the network (download Wireshark from Google.com). Filter Wireshark to capture only ICMP traffic by typing "ICMP" in the search bar. ICMP is a network layer protocol that relays messages concerning network connection issues.  Next, open Powershell on Windows VM1 and ping Linux VM2's private IP address. The "ping" command uses ICMP to test connectivity between hosts. Now we will inspect the actual data being transmitted within the ICMP packets. Lastly, we will perpetually ping Linux VM2 from Windows VM1, using the "ping -t" command in Powershell.
+Use Remote Desktop to connect to Windows 10 VM1. In Windows 10 VM1, install and open Wireshark, which is a protocol analyzer that allows you to view all packets coming through the network (download Wireshark from Google.com). Then filter Wireshark to capture only ICMP traffic by typing "ICMP" in the search bar. ICMP is a network layer protocol that relays messages concerning network connection issues.  Next, open Powershell on Windows VM1 and ping Linux VM2's private IP address. Ping is a command tool that uses ICMP to check if another computer is reachable on the network. Once Linux VM2 is pinged, we will inspect the actual data being transmitted within the ICMP packets. Lastly, we will perpetually ping Linux VM2 from Windows VM1, using the "ping -t" command in Powershell.
 </p>
 <br />
 
@@ -73,7 +73,7 @@ Use Remote Desktop to connect to Windows 10 VM1. In Windows 10 VM1, install and 
 </p><br>
 
 <p>
-We will configure the firewall on Linux VM2 in Azure to deny inbound ICMP traffic from Windows VM1. Once this is done, Windows VM1 will stop receiving echo replies from Linux VM2. We will observe the result in Wireshark. To block ICMP traffic on Linux VM2, navigate to Network Security Group (NSG) in Azure. Select VM2, and edit the inbound security rule to deny ICMP. We can re-enable ICMP traffic on Linux VM2 by going back to NSG in Azure and changing the inbound security rule to "allow." 
+We will configure the firewall on Linux VM2 in Azure to deny inbound ICMP traffic from Windows VM1. Once this is done, Windows VM1 will stop receiving echo replies from Linux VM2. We will observe the result in Wireshark. To block ICMP traffic on Linux VM2, navigate to Network Security Group (NSG) in Azure. Select VM2 and edit the inbound security rule to deny ICMP. After observing the effects, we can re-enable ICMP traffic on Linux VM2 by going back to NSG in Azure and changing the inbound security rule to "allow." 
 </p>
 <br />
 
@@ -83,7 +83,7 @@ We will configure the firewall on Linux VM2 in Azure to deny inbound ICMP traffi
 <img src="https://i.imgur.com/KMUXUhF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-We will access Linux VM2 from Windows VM1 via SSH. SSH gives access to the machine's command line interface (CLI). We will also set  Windows VM 1 Wireshark filter to capture only SSH packets by typing "ssh labuser@10.0.0.5" (Linux VM2's private IP address) in the PowerShell command line. Following this, we will observe  Wireshark capturing SSH packets.
+We will access Linux VM2 from Windows VM1 via SSH. SSH is used when remotely connecting from one computer to another and accesing the command line. We will also set  Windows VM 1 Wireshark filter to capture only SSH packets by typing "ssh labuser@10.0.0.5" (Linux VM2's private IP address) in the PowerShell command line. When this is done, we will observe  Wireshark capturing SSH packets.
 </p>
 <br />
 
@@ -110,6 +110,6 @@ We will analyze Domain Name Server (DNS) traffic by filtering it on Wireshark. W
 <img src="https://i.imgur.com/UJPaE1j.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-We will filter for Remote Desktop Protocol (RDP) traffic, which operates on TCP port 3389. RDP is used to remotely connect from one computer to another to gain remote desktop graphic user interface (GUI). We can also filter for RDP using the port number, by typing, "tcp.port==3389" in Wireshark.
+We will filter for Remote Desktop Protocol (RDP) traffic, which operates on TCP port 3389. RDP is used to remotely connect from one computer to another to gain remote desktop graphic user interface (GUI). We will filter for RDP using the port number, by typing "tcp.port==3389" in Wireshark.
 </p>
 <br />
