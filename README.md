@@ -107,9 +107,9 @@ We will analyze Domain Name Server (DNS) traffic by filtering it on Wireshark. W
 
 <h3>Step 7: Observe RDP Traffic</h3><br>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UJPaE1j.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-We will filter for Remote Desktop Protocol (RDP) traffic, which operates on TCP port 3389. RDP is used to remotely connect from one computer to another to gain remote desktop graphic user interface (GUI).
+We will filter for Remote Desktop Protocol (RDP) traffic, which operates on TCP port 3389. RDP is used to remotely connect from one computer to another to gain remote desktop graphic user interface (GUI). We can also filter for RDP using the port number, by typing, "tcp.port==3389" in Wireshark.
 </p>
 <br />
