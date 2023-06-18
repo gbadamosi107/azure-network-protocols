@@ -58,7 +58,7 @@ In Azure, create two VMs, one will be Linux (Ubuntu) machine and the other will 
 </p><br>
 <p>  
   
-Use Remote Desktop to connect to Windows 10 VM1. In Windows 10 VM1, install and open Wireshark, which is a protocol analyzer that allows you to view all packets coming through the network (download Wireshark from Google.com). Then filter Wireshark to capture only ICMP traffic by typing "ICMP" in the search bar. ICMP is a network layer protocol that relays messages concerning network connection issues.  Next, open Powershell on Windows VM1 and ping Linux VM2's private IP address. Ping is a command tool that uses ICMP to check if another computer is reachable on the network. Once Linux VM2 is pinged, we will inspect the actual data being transmitted within the ICMP packets. Lastly, we will perpetually ping Linux VM2 from Windows VM1, using the "ping -t" command in Powershell.
+Use Remote Desktop to connect to Windows 10 VM1. In Windows 10 VM1, install and open Wireshark, which is a protocol analyzer that allows you to view all packets coming through the network (download Wireshark from Google.com). Then filter Wireshark to capture only ICMP traffic by typing "ICMP" in the search bar. ICMP is a network layer protocol that relays messages concerning network connection issues.  Next, open Powershell on Windows VM1 and ping Linux VM2's private IP address. Ping is a command tool that uses ICMP to check if another computer is reachable on the network. Once Linux VM2 is pinged, we will inspect the actual data being transmitted within the ICMP packets. Lastly, we will perpetually ping Linux VM2 from Windows VM1, using the "ping -t" command in Powershell. We can stop the perpetual pings by typing "CTRL C" in PowerShell.
 </p>
 <br />
 
