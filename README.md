@@ -73,17 +73,17 @@ Use Remote Desktop to connect to Windows 10 VM1. In Windows 10 VM1, install and 
 </p><br>
 
 <p>
-We will configure the firewall on Linux VM2 in Azure to deny inbound ICMP traffic from Windows VM1. Once this is done, Windows VM1 will stop receiving echo replies from Linux VM2, and will show, "Request timed out." We will observe the result in Wireshark. To block ICMP traffic on Linux VM2, navigate to Network Security Group (nsg) in Azure. Select VM2, and edit the inbound security rule to deny ICMP. We can re-enable ICMP traffic on Linux VM2 by going back to NSG in Azure and changing the inbound security rule to "allow." 
+We will configure the firewall on Linux VM2 in Azure to deny inbound ICMP traffic from Windows VM1. Once this is done, Windows VM1 will stop receiving echo replies from Linux VM2. We will observe the result in Wireshark. To block ICMP traffic on Linux VM2, navigate to Network Security Group (NSG) in Azure. Select VM2, and edit the inbound security rule to deny ICMP. We can re-enable ICMP traffic on Linux VM2 by going back to NSG in Azure and changing the inbound security rule to "allow." 
 </p>
 <br />
 
 
 <h3>Step 4: Observe SSH Traffic</h3><br>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/KMUXUhF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+We will access Linux VM2 from Windows VM1 via SSH. SSH gives access to the machine's command line interface (CLI). We will also set  Windows VM 1 Wireshark filter to capture only SSH packets by typing "ssh labuser@10.0.0.5" (Linux VM2's private IP address) in the PowerShell command line. Following this, we will observe  Wireshark capturing SSH packets.
 </p>
 <br />
 
@@ -101,7 +101,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In Windows VM1, we will use Wireshark to filter for Dynamic Host Configuration Protocol (DHCP), which operates on UDP ports 67 and 68, and is used to 
 </p>
 <br />
 
