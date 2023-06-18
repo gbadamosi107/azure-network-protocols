@@ -89,19 +89,19 @@ We will access Linux VM2 from Windows VM1 via SSH. SSH gives access to the machi
 
 <h3>Step 5: Observe DHCP Traffic</h3><br>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/9pals8I.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In Windows VM1, we will use Wireshark to filter for the Dynamic Host Configuration Protocol (DHCP), which operates on UDP ports 67 and 68, and is used to assign an IP address to the host machine when it first connects to the network. We will request a new IP address with the command, "ipconfig /renew." 
 </p>
-<br />
+<br />d
 
 <h3>Step 6: Observe DNS Traffic</h3><br>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/GpMKstc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-In Windows VM1, we will use Wireshark to filter for Dynamic Host Configuration Protocol (DHCP), which operates on UDP ports 67 and 68, and is used to 
+We will analyze Domain Name Server (DNS) traffic by filtering it on Wireshark. We will then initiate DNS traffic for Google by typing the command, "nslookup www.google.com." DNS uses nslookup to provide the IP address for a host when the human-readable web name is provided. DNS uses both UDP and TCP port 53.
 </p>
 <br />
 
